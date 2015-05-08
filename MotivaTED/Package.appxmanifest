@@ -1,36 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-
-  <Identity Name="5496086b-8d19-4e40-8ec4-f8f4a0a57bcc" Publisher="CN=jodrew" Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="5496086b-8d19-4e40-8ec4-f8f4a0a57bcc" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
-
+  <Identity Name="" Publisher="CN=jodrew" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="a983ea6a-6af8-421a-84e8-088205ceda9e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>MotivaTED</DisplayName>
-    <PublisherDisplayName>jodrew</PublisherDisplayName>
+    <PublisherDisplayName>
+    </PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.3.1</OSMinVersion>
     <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
   </Prerequisites>
-  
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="MotivaTED.App">
-        <m3:VisualElements DisplayName="MotivaTED" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="MotivaTED" ForegroundText="light" BackgroundColor="transparent">
-            <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png" />
-            <m3:SplashScreen Image="Assets\SplashScreen.png" />
-        </m3:VisualElements>
+      <m3:VisualElements DisplayName="MotivaTED" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="MotivaTED" ForegroundText="light" BackgroundColor="transparent">
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" />
+      </m3:VisualElements>
     </Application>
   </Applications>
   <Capabilities>
     <Capability Name="internetClientServer" />
-  <DeviceCapability Name="bluetooth.rfcomm" xmlns="http://schemas.microsoft.com/appx/2013/manifest">
+    <DeviceCapability Name="bluetooth.rfcomm" xmlns="http://schemas.microsoft.com/appx/2013/manifest">
       <Device Id="any">
         <!-- Used by the Microsoft Band SDK -->
         <Function Type="serviceId:A502CA9A-2BA5-413C-A4E0-13804E47B38F" />
@@ -39,5 +35,6 @@
         <!--Arduino communication-->
         <Function Type="name:serialPort" />
       </Device>
-    </DeviceCapability></Capabilities>
+    </DeviceCapability>
+  </Capabilities>
 </Package>
