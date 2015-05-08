@@ -8,7 +8,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="ScenarioFrame" Grid.Row="0" Margin="0,10,0,0"/>
+        <Border x:Name="StatusBorder" Grid.Row="1" Visibility="Collapsed">
+            <TextBlock x:Name="StatusBlock" Foreground="White" FontWeight="Bold" Margin="12, 10, 12, 10" TextWrapping="Wrap"/>
+        </Border>
     </Grid>
 </Page>

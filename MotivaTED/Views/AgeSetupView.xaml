@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="MotivaTED.Views.AgeSetupView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MotivaTED.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="RootGrid" Margin="12,20,12,12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="300"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+            </Grid>
+
+            <StackPanel Grid.Row="1" Margin="0,0,0,10">
+                <TextBlock Style="{StaticResource ScenarioDescriptionTextStyle}" TextWrapping="Wrap">
+                Choose your age to determine your target and maximum heart rate - as defined by the American Heart Association
+                </TextBlock>
+
+                <ComboBox x:Name="ComboBoxMenu" HorizontalAlignment="Left" Height="71"   
+                Margin="15,0,0,0" VerticalAlignment="Top" Width="300">
+                    <ComboBoxItem Content="Under 20" Tag="20" IsSelected="True"/>
+                    <ComboBoxItem Content="21-25" Tag="25" />
+                    <ComboBoxItem Content="26-30" Tag="30" />
+                    <ComboBoxItem Content="31-35" Tag="35" />
+                    <ComboBoxItem Content="36-40" Tag="40" />
+                    <ComboBoxItem Content="41-45" Tag="45" />
+                    <ComboBoxItem Content="46-50" Tag="50" />
+                    <ComboBoxItem Content="r u still able to walk?" Tag="70" />
+                </ComboBox>
+
+                <TextBox x:Name="YourAgeTextBox" Width="300" Margin="15,0,0,0" HorizontalAlignment="Left" IsEnabled="False"></TextBox>
+
+                <Button x:Name="SaveButton" Grid.Row="1" Content="Save" Margin="0,0,10,0" Click="SaveButton_Click"/>
+            </StackPanel>
+
+            <!-- Status Block for providing messages to the user.  Use the
+            NotifyUser() method to populate the message -->
+            <Border x:Name="ErrorBorder" Background="Red" Grid.Row="2"/>
+            <TextBlock x:Name="StatusBlock" Grid.Row="2" Margin="12, 10, 12, 10" Visibility="Collapsed"/>
+        </Grid>
+    </Grid>
+</Page>
